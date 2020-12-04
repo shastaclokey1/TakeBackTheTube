@@ -1,0 +1,66 @@
+This document is a place to explore the resources available to develop the customizable youtube page I have described in CustomizableYoutube.txt
+
+https://web.archive.org/web/20201111211434if_/https://developers.google.com/youtube/v3/getting-started#quota
+	
+	-This page shows how to set up an authentication key with the Youtube API
+	
+	-It looks like each request from the API takes a certain number of "units" and common applications are granted 10,000 units per day. This is meant to protect against sites spamming the youtube API.
+	
+	-The data is returned in JSON format.
+
+https://web.archive.org/web/20201101030656if_/https://developers.google.com/youtube/v3/docs/search/list
+
+	-This page shows how to request content from a specified channel.
+
+	-This could be how I accomplish my goal to have videos from each of the selected channels on my site's dashboard.
+
+https://www.npmjs.com/package/yt-search
+	
+	- This package looks promising.
+
+	- It looks like I can search for channels, search for playlists, and search for individual videos with the 
+	
+		yts({"query: 'search term'"}, function (err, response) {
+			if ( err ) throw err
+			console.log( r.videos ) // video results
+			console.log( r.playlists ) // playlist results
+			console.log( r.channels ) // channel results
+			console.log( r.live ) // live stream results
+		} ) 
+	  
+	  funciton  
+
+	- I can't tell if I can display youtube url's with this search engine.
+
+	- It looks like this package has 8 dependencies. They are on the npm website.
+
+	- This package does not require any youtube api key. (No restrictions on number of searches!!)
+	
+	- https://github.com/talmobi/yt-search/blob/master/src/index.js
+
+https://www.npmjs.com/package/usetube
+	
+	- This could also be an option for searching videos and channels.
+
+	- There is no 'search for playlist' function in this package, but the 
+
+		usetube.getChannelVideos('PLAbeRqyTx1rIGWY13HgPyh0VF0LdoTQFp').then(videos => { console.log(videos) })
+
+	  looks promising to do what I want.
+
+	- The readme does not specify what parameters are returned with the videos list.
+
+	- My hope is that these contain names, descriptions and urls for each video.
+
+	- https://github.com/valerebron/usetube/tree/master/dist
+
+https://www.w3schools.com/html/html_youtube.asp
+
+	- This can be used to embedd whatever video I click on from the search results in a watch page.
+
+	- It looks like all I have to do is set the src attribute to the video's url and html will take care of the rest. Sweet!
+
+	- Example:
+	  <iframe width="420" height="315"
+		src="https://www.youtube.com/embed/tgbNymZ7vqY">
+	  </iframe>

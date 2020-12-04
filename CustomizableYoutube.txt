@@ -1,0 +1,54 @@
+I struggle to stop myself from watching youtube videos.
+
+I often find myself scrolling through tons of content I am not interested in for up to 20 minutes when I should be working or could be doing something more fun.
+
+	I want to solve this problem by making myself a website that lets me curate the youtube channels I am interested in onto a single page that shows all the videos I havent watched yet in an order that makes sense.
+
+	I want this dashboard to have checkboxes for each of the channels I include so I can choose what content to look at when I am in the mood to browse.
+
+	I can hard code the channels I am interested in at first.
+
+	I eventually would like to be able to have a channel search feature that lets me add new channels to the dashboard selection bar.
+
+I also find myself watching video after video with less and less motivation to go do work the more I watch.
+	
+	I think I can solve this problem by having no recommended content at the end of each youtube video on this site.
+
+	I can include a replay button and a button to take me back to the dashboard.
+
+	I think all the channel selection boxes should be unchecked when I return to the dashboard after watching a video.
+
+	I can also play around with having some kind of task I have to complete after watching a video before being able to watch another video.
+		
+		I can add in a text box to describe the video I just watched that has to have a certain number of characters input before letting me search for more videos on the dashboard.
+
+I often have a tough time remembering what I have watched after falling into a youtube hole.
+	
+	I can use the summaries I will write at the end of each video as the content for a history tab that houses the titles and my descriptions for the last day/week/month/year.
+
+*************Plan****************
+1. Use one of my bare bones, already built websites and test out each of the packages for searching youtube channel videos.
+
+	- https://www.npmjs.com/package/usetube
+
+	- https://www.npmjs.com/package/yt-search
+	
+	- I can use the website I built for John because it already has express and everything set up.
+
+2. Make a dashboard where I can click check boxes to include channels in search params then scroll through all the titles and descriptions of videos that get returned.
+
+	- I will manually include the channels in some kind of list (probably just an array).
+
+	- I will need to figure out how to implement a scrollable UI that works for a computer and a smartphone.
+
+	- Each title/description pair will be a clickable button that launches the specified video in the view I am about to describe.
+
+		* This launching will most likely be completed using a GET request, however I could just use hyperlinks. I think using the express framework I have set up would be best.
+
+3. Make a watch page that has one video box, the video's name, the video's description, and a button to go back to the home screen.
+
+	- https://www.w3schools.com/html/html_youtube.asp
+	
+	- The watch page can probably just be an iframe for the video, a header1 or header2 element for the title, and a paragraph element for the description.
+
+	- I think the "back to home" functionality will just be in the nav bar.
