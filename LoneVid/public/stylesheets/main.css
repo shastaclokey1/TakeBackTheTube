@@ -1,0 +1,18 @@
+#logo {
+    height: 100px;
+}
+
+li {
+    height: 125px;
+    font-size: 25px;
+    text-align: right;
+}
+
+a {
+    height:  125px;
+}
+
+.navbar {
+    height: 125px;
+    background-color: white;
+}
