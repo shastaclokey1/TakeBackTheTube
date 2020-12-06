@@ -1,21 +1,21 @@
 {
-  "name": "websiteforjohn",
+  "name": "LoneVid",
   "version": "1.0.0",
-  "description": "website for john's electrician business",
+  "description": "I often find myself scrolling through tons of content I am not interested in for up to 20 minutes when I should be working or could be doing something more fun. I want to solve this problem by making myself a website that lets me curate the youtube channels I am interested in onto a single page that shows all the videos I havent watched yet in an order that makes sense.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shastaclokey1/WebsiteForJohn.git"
+    "url": "git+https://github.com/shastaclokey1/TakeBackTheTube.git"
   },
   "author": "shasta clokey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shastaclokey1/WebsiteForJohn/issues"
+    "url": "https://github.com/shastaclokey1/TakeBackTheTube/issues"
   },
-  "homepage": "https://github.com/shastaclokey1/WebsiteForJohn#readme",
+  "homepage": "https://github.com/shastaclokey1/TakeBackTheTube#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",

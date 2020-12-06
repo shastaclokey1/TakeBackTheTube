@@ -28,5 +28,5 @@ app.get("*", function(request, response) {
 });
 
 app.listen(process.env.PORT || 3000, function() {
-    console.log("Server has started for John's website");
+    console.log("Server has started for Lone Vid");
 });
