@@ -64,3 +64,12 @@ https://www.w3schools.com/html/html_youtube.asp
 	  <iframe width="420" height="315"
 		src="https://www.youtube.com/embed/tgbNymZ7vqY">
 	  </iframe>
+
+https://logomakr.com/9K2oKz
+
+	- This is a cool site that can be used to make a logo for my cuscomizable youtube site.
+
+	- I think I'll call my site lonevid becasue I already have that domain name.
+
+	- It will be worth paying the $19 to get high resolution (vector format) logo files once I finalize the logo design.
+	  In the meantime I can just use the low quality free download option.

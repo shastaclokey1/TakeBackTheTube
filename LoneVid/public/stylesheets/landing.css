@@ -36,27 +36,35 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite; 
+    animation: imageAnimation 70s linear infinite; 
 }
 
 .slideshow li:nth-child(1) { 
-    background-image: url(/images/IMG_2125.JPG) 
+    background-image: url(/images/AutumForest.jpg) 
 }
 .slideshow li:nth-child(2) {  
-    background-image: url(/images/multimeter.jpg);
+    background-image: url(/images/DenseForest.jpg);
     animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-    background-image: url(/images/toolBelt.jpg);
+    background-image: url(/images/ForestPath.jpg);
     animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-    background-image: url(/images/kitchen3.JPG);
+    background-image: url(/images/GreenMistyCliffs.jpg);
     animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-    background-image: url(/images/lightsHangingFromCeiling.jpg);
+    background-image: url(/images/SmallWaterfallIntoRiver.jpg);
     animation-delay: 40s; 
+}
+.slideshow li:nth-child(6) { 
+    background-image: url(/images/SunsetBeach.jpg);
+    animation-delay: 50s; 
+}
+.slideshow li:nth-child(7) { 
+    background-image: url(/images/WaterfallOnRockWall.jpg);
+    animation-delay: 60s; 
 }
 
 @keyframes imageAnimation { 

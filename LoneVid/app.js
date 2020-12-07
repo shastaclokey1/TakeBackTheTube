@@ -11,16 +11,16 @@ app.get("/", function(request, response) {
     response.render("landing");
 });
 
-app.get("/about", function(request, response) {
-    response.render("about");
+app.get("/dashboard", function(request, response) {
+    response.render("dashboard");
 });
 
-app.get("/portfolio", function(request, response) {
-    response.render("portfolio");
+app.get("/watch", function(request, response) {
+    response.render("watch");
 });
 
-app.get("/contact", function(request, response) {
-    response.render("contact");
+app.get("/addchannels", function(request, response) {
+    response.render("addchannels");
 });
 
 app.get("*", function(request, response) {
