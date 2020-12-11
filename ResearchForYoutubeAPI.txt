@@ -38,6 +38,14 @@ https://www.npmjs.com/package/yt-search
 	
 	- https://github.com/talmobi/yt-search/blob/master/src/index.js
 
+	- I have been able to use this package to request playlists using their id, videos using search terms, videos using their id, and channels using their id.
+		
+		- The data is returned in JSON format and I will be able to index into each returned data item easily.
+
+		- I will probably need some null protection for empty data items at every level, but that is easy enough.
+
+	- I want to find the playlist id of all the videos a channel uploads so I can search for a host of list ids and get all the videos for the associated channels in one swoop.
+
 https://www.npmjs.com/package/usetube
 	
 	- This could also be an option for searching videos and channels.
@@ -53,6 +61,8 @@ https://www.npmjs.com/package/usetube
 	- My hope is that these contain names, descriptions and urls for each video.
 
 	- https://github.com/valerebron/usetube/tree/master/dist
+
+	- I was not able to get this package to work. I installed all the dependencies and used their code examples. I will come back to this if I cannot get yt-search to work the way I want.
 
 https://www.w3schools.com/html/html_youtube.asp
 
@@ -75,3 +85,7 @@ https://logomakr.com/9K2oKz
 	  In the meantime I can just use the low quality free download option.
 
 	- Just kidding katie can help
+
+https://www.w3schools.com/Css/css3_flexbox_container.asp
+
+	- I can use flexbox to resize the watch iframe the way I want it.

@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var yts = require('yt-search');
 
 var app = express();
 
@@ -12,6 +13,22 @@ app.get("/", function(request, response) {
 });
 
 app.get("/dashboard", function(request, response) {
+
+    //var opts = { listId: 'PLZz_xesDTE6-TBXmXlcAeoUfOYxRkzw7z' }
+    var opts = { videoId: 'IuNsrW6mH-I' }
+
+    //var opts = { query: 'Tesla' }
+    yts( opts, function ( err, r ) {
+        if ( err ) 
+        {
+            throw err
+        }
+        console.log( r ) // video results
+        //console.log( r.playlists ) // playlist results
+        //console.log( r.channels ) // channel results
+        //console.log( r.live ) // live stream results
+    });
+
     response.render("dashboard");
 });
 
