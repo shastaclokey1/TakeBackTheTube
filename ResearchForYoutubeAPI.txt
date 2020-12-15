@@ -46,6 +46,29 @@ https://www.npmjs.com/package/yt-search
 
 	- I want to find the playlist id of all the videos a channel uploads so I can search for a host of list ids and get all the videos for the associated channels in one swoop.
 
+		- Go to the channel home tab, scroll down, and click on the "play all" button next to the uploads playlist.
+
+		- This will start playing the first video of the uploads playlist which should be the most recent video.
+
+		- Click on the list of videos in the sidebar to get to the uploads playlist page.
+
+		- Copy the playlist id from the url as follows: https://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A
+		  copy UUagiBBx1prefrlsDzDxuA9A
+
+		- Use this playlist id as a query param.
+	
+	- I am in the process of figuring out why this package cannot handle the json returned when requesting the "all uploads" playlist of a certian channel.
+
+		- The package is throwing an error when I use the playlist id of a channel's uploads playlist.
+
+		- The error occurs when working with the JSON object to generate a list of videos after the JSONString has already been parsed into a JSON object.
+
+		- I logged the complete json string to the console and want to look at it with https://jsonprettyprint.org/.
+
+		- The console log has returns in it which I need to get rid of for the pretty print to work.
+
+		- I will use vim's find and replace feature to do this.
+
 https://www.npmjs.com/package/usetube
 	
 	- This could also be an option for searching videos and channels.

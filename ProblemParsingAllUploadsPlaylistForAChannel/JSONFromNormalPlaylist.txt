@@ -1,0 +1,47 @@
+{ responseContext: 
+   { serviceTrackingParams: [ [Object], [Object], [Object], [Object], [Object] ],
+     webResponseContextExtensionData: { ytConfigData: [Object], hasDecorated: true } },
+  contents: { twoColumnBrowseResultsRenderer: { tabs: [Array] } },
+  metadata:
+   { playlistMetadataRenderer:
+      { title: 'Income Reveal',
+        androidAppindexingLink: 'android-app://com.google.android.youtube/http/www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ',
+        iosAppindexingLink: 'ios-app://544007664/vnd.youtube/www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ' } },
+  trackingParams: 'CAAQhGciEwjRucmDmMbtAhX00uMHHZfOBKk=',
+  topbar:
+   { desktopTopbarRenderer:
+      { logo: [Object],
+        searchbox: [Object],
+        trackingParams: 'CA0Qq6wBIhMI0bnJg5jG7QIV9NLjBx2XzgSp',
+        topbarButtons: [Array],
+        hotkeyDialog: [Object],
+        backButton: [Object],
+        forwardButton: [Object],
+        a11ySkipNavigationButton: [Object] } },
+  microformat:
+   { microformatDataRenderer:
+      { urlCanonical: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ',
+        title: 'Income Reveal',
+        description: '',
+        thumbnail: [Object],
+        siteName: 'YouTube',
+        appName: 'YouTube',
+        androidPackage: 'com.google.android.youtube',
+        iosAppStoreId: '544007664',
+        iosAppArguments: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ',
+        ogType: 'website',
+        urlApplinksWeb: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ&feature=applinks',
+        urlApplinksIos: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ&feature=applinks',
+        urlApplinksAndroid: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ&feature=applinks',
+        urlTwitterIos: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ&feature=twitter-deep-link',
+        urlTwitterAndroid: 'http://www.youtube.com/playlist?list=PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ&feature=twitter-deep-link',
+        twitterCardType: 'summary',
+        twitterSiteHandle: '@YouTube',
+        schemaDotOrgType: 'http://schema.org/WebPage',
+        noindex: false,
+        unlisted: false,
+        linkAlternates: [Array] } },
+  sidebar:
+   { playlistSidebarRenderer:
+      { items: [Array],
+        trackingParams: 'CAEQk-8CIhMI0bnJg5jG7QIV9NLjBx2XzgSp' } } }

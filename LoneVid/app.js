@@ -14,19 +14,30 @@ app.get("/", function(request, response) {
 
 app.get("/dashboard", function(request, response) {
 
-    //var opts = { listId: 'PLZz_xesDTE6-TBXmXlcAeoUfOYxRkzw7z' }
-    var opts = { videoId: 'IuNsrW6mH-I' }
+    var opts = { listId: 'UUagiBBx1prefrlsDzDxuA9A' }
+    //var opts = { listId: 'PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ'}
+    //var opts = { videoId: 'IuNsrW6mH-I' }
 
-    //var opts = { query: 'Tesla' }
+    //var opts = { query: 'Solving The Money Problem' }
     yts( opts, function ( err, r ) {
         if ( err ) 
         {
-            throw err
+            throw err;
         }
-        console.log( r ) // video results
-        //console.log( r.playlists ) // playlist results
-        //console.log( r.channels ) // channel results
-        //console.log( r.live ) // live stream results
+        // console.log("\n \n \nVideos:");
+        // console.log( r.videos ); // video results
+        // console.log("\n \n \nPlaylists:");
+        // console.log( r.playlists ); // playlist results
+        // console.log("\n \n \nChannels:");
+        // console.log( r.channels ); // channel results
+        // console.log("\n \n \nChannels:");
+        //console.log( r.live ); // live stream results
+
+
+        // console.log("Playlist:");
+        // r.videos.forEach(function (video) {
+        //     console.log(video.title);
+        //  });
     });
 
     response.render("dashboard");

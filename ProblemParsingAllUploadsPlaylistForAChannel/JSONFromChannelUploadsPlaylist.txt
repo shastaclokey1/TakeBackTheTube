@@ -1,0 +1,47 @@
+{ responseContext: 
+   { serviceTrackingParams: [ [Object], [Object], [Object], [Object], [Object] ],
+     webResponseContextExtensionData: { ytConfigData: [Object], hasDecorated: true } },
+  contents: { twoColumnBrowseResultsRenderer: { tabs: [Array] } },
+  metadata:
+   { playlistMetadataRenderer:
+      { title: 'Uploads from Solving The Money Problem',
+        androidAppindexingLink: 'android-app://com.google.android.youtube/http/www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A',
+        iosAppindexingLink: 'ios-app://544007664/vnd.youtube/www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A' } },
+  trackingParams: 'CAAQhGciEwiYx-uQncbtAhWBiFsKHTxmC6U=',
+  topbar:
+   { desktopTopbarRenderer:
+      { logo: [Object],
+        searchbox: [Object],
+        trackingParams: 'CAsQq6wBIhMImMfrkJ3G7QIVgYhbCh08Zgul',
+        topbarButtons: [Array],
+        hotkeyDialog: [Object],
+        backButton: [Object],
+        forwardButton: [Object],
+        a11ySkipNavigationButton: [Object] } },
+  microformat:
+   { microformatDataRenderer:
+      { urlCanonical: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A',
+        title: 'Uploads from Solving The Money Problem',
+        description: '',
+        thumbnail: [Object],
+        siteName: 'YouTube',
+        appName: 'YouTube',
+        androidPackage: 'com.google.android.youtube',
+        iosAppStoreId: '544007664',
+        iosAppArguments: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A',
+        ogType: 'website',
+        urlApplinksWeb: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A&feature=applinks',
+        urlApplinksIos: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A&feature=applinks',
+        urlApplinksAndroid: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A&feature=applinks',
+        urlTwitterIos: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A&feature=twitter-deep-link',
+        urlTwitterAndroid: 'http://www.youtube.com/playlist?list=UUagiBBx1prefrlsDzDxuA9A&feature=twitter-deep-link',
+        twitterCardType: 'summary',
+        twitterSiteHandle: '@YouTube',
+        schemaDotOrgType: 'http://schema.org/WebPage',
+        noindex: false,
+        unlisted: false,
+        linkAlternates: [Array] } },
+  sidebar:
+   { playlistSidebarRenderer:
+      { items: [Array],
+        trackingParams: 'CAEQk-8CIhMImMfrkJ3G7QIVgYhbCh08Zgul' } } }
