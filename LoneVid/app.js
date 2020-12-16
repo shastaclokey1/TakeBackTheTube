@@ -12,32 +12,54 @@ app.get("/", function(request, response) {
     response.render("landing");
 });
 
-app.get("/dashboard", function(request, response) {
+app.get("/dashboard", function(request, response) 
+{
 
-    var opts = { listId: 'UUagiBBx1prefrlsDzDxuA9A' }
-    //var opts = { listId: 'PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ'}
-    //var opts = { videoId: 'IuNsrW6mH-I' }
+    var opts = { listId: 'UUagiBBx1prefrlsDzDxuA9A' };
+    //var opts = { listId: 'PLZz_xesDTE6_v7eLQ69sGXnhf-aIqkJYJ'};
+    //var opts = { videoId: 'IuNsrW6mH-I' };
 
-    //var opts = { query: 'Solving The Money Problem' }
-    yts( opts, function ( err, r ) {
+    //var opts = { query: 'Solving The Money Problem' };
+
+    var videoArray = [];
+
+    yts( opts, function ( err, playlist ) 
+    {
         if ( err ) 
         {
             throw err;
         }
-        // console.log("\n \n \nVideos:");
-        // console.log( r.videos ); // video results
-        // console.log("\n \n \nPlaylists:");
-        // console.log( r.playlists ); // playlist results
-        // console.log("\n \n \nChannels:");
-        // console.log( r.channels ); // channel results
-        // console.log("\n \n \nChannels:");
-        //console.log( r.live ); // live stream results
 
+        console.log("Playlist:");
+        playlist.videos.forEach(function (video) 
+        {
+            var infoINeedFromVideos = 
+            {
+                "videoId": video.videoId, 
+                "videoTitle": video.title, 
+                "videoDuration": video.duration, 
+                "videoDescription": "" 
+            };
 
-        // console.log("Playlist:");
-        // r.videos.forEach(function (video) {
-        //     console.log(video.title);
-        //  });
+            videoArray.push(infoINeedFromVideos);
+         });
+    });
+
+    console.log(videoArray)
+
+    videoArray.forEach(function (currentVideo) 
+    {
+        console.log("ID: " + currentVideo.videoId);// + "    Duration: " + currentVideo.videoDuration + "    Title: " + currentVideo.videoTitle);
+        // opts = { videoId: currentVideo.videoId };
+        // yts( opts, function ( err, videoDetails ) 
+        // {
+        //     if ( err ) 
+        //     {
+        //         throw err;
+        //     }
+            
+        //     console.log(videoDetails);
+        // });
     });
 
     response.render("dashboard");

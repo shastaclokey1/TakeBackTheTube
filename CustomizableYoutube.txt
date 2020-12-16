@@ -31,7 +31,7 @@ I often have a tough time remembering what I have watched after falling into a y
 
 	- https://www.npmjs.com/package/usetube
 
-	- https://www.npmjs.com/package/yt-search
+	- https://www.npmjs.com/package/yt-search (I went with this api)
 	
 	- I can use the website I built for John because it already has express and everything set up.
 
@@ -39,11 +39,29 @@ I often have a tough time remembering what I have watched after falling into a y
 
 	- I will manually include the channels in some kind of list (probably just an array).
 
+		* Each channel from the list above will have an associated checkbox on the dashboard to specify whether or not I want to request the videos from that channel.
+
+	- I will request all the uploaded videos for each selected channel from the above list.
+
+		* All of these videos will be conglomorated into one giant list sorted from newest to oldest.
+
 	- I will need to figure out how to implement a scrollable UI that works for a computer and a smartphone.
+	
+		* This scrolable UI will display the title, description, and duration for each video in the conglomorate list.
+
+		* I can either load all the videos to the list when I launch the page or have the interface be dynamic and only load the items in the list that are in view. I don't know how to do this, so maybe it is best to load all the elements to start and go from there.
+
+		* I need to figure out where this conglomorate list will be stored and how I can populate the dashboard html based on the search results from the channels I select.
+
+		* I can probably make a "partial" html document that I inject into the dashboard page and provide information to from the app.js server code.
+
+		* I need to refresh on how to do this.
 
 	- Each title/description pair will be a clickable button that launches the specified video in the view I am about to describe.
 
 		* This launching will most likely be completed using a GET request, however I could just use hyperlinks. I think using the express framework I have set up would be best.
+
+		* As stated above, this clickable button will most likely be an html partial and include a hyperlink with the youtube video's id as a search parameter.
 
 3. Make a watch page that has one video box, the video's name, the video's description, and a button to go back to the home screen.
 
@@ -52,3 +70,7 @@ I often have a tough time remembering what I have watched after falling into a y
 	- The watch page can probably just be an iframe for the video, a header1 or header2 element for the title, and a paragraph element for the description.
 
 	- I think the "back to home" functionality will just be in the nav bar.
+
+	- The framework for this is implemented and I have tested that the html iframe element lets me play a video given its url(youtube id).
+
+	- I found a css/javascript tool called flexbox that I should be able to use to style the ui of the watch page.

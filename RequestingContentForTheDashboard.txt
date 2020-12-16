@@ -1,0 +1,12 @@
+I have successfully requested a set of json data from the "Solving The Money Problem" youtube channel containing all the channel's uploaded videos.
+	- I am able to get the video title, id, list id, duration, and author.
+	- I want to get the description, but it doesn't look like this _parsePlaylistInitialData function has a description available.
+	- I can think of two options.
+
+Options for getting descriptions for videos on dashboard:
+1. I can use the video ids I have successfully requested to perform individual video id quereys to get the description for each video in the entire list conglomorated from every channel.
+	- I'll give this a try first.
+	- For some reason the "push" command won't work for adding video info to an array that I plan to use to request details for each video.
+	- I'm pretty tired and want to go to bed.
+	- I'll look at this link in the morning to figure this out (https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/).
+2. I can figure out how to hack the yt-search code to get a json response that has the video descriptions when I request a playlist.
