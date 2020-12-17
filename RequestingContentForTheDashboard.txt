@@ -9,4 +9,8 @@ Options for getting descriptions for videos on dashboard:
 	- For some reason the "push" command won't work for adding video info to an array that I plan to use to request details for each video.
 	- I'm pretty tired and want to go to bed.
 	- I'll look at this link in the morning to figure this out (https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/).
+	- I was able to request each video's details, but the whole request time was super long.
+		- I think I should go for method 2 and use this as a last resort.
+		- I don't want it to take forever to load the dashboard.
+		- Worst case I just won't have descriptions for the dashboard.
 2. I can figure out how to hack the yt-search code to get a json response that has the video descriptions when I request a playlist.
