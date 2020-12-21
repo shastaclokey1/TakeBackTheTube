@@ -14,3 +14,14 @@ Options for getting descriptions for videos on dashboard:
 		- I don't want it to take forever to load the dashboard.
 		- Worst case I just won't have descriptions for the dashboard.
 2. I can figure out how to hack the yt-search code to get a json response that has the video descriptions when I request a playlist.
+	- Shiiiit. I got to the bottom of why the json didn't have the video descriptions for the channel uploads playlist.
+	- The channel uploads page on youtube doesn't have descriptions for any of the videos.
+	- Hmmm I don't want the dashboard to take forever to load by requesting the video details for every video on all the channels.
+	- I will just have Title/Author/Duration on the dashboard.
+	- I will think about adding video thumbnails to each item on the dashboard.
+
+*****Plan for requesting content******
+- I will use yt-search to request the uploads playlist for every channel I select.
+- I will extract the channel name, id, duration, thumbnail, upload date, and title for each video into a object and add that DashboardVideo object to a list sorted by upload date. 
+- I will use this list to propagate the dashboard.
+	-This will be described in the doucument ConnectingYtSearchBackendWithDashboardFrontend.txt.

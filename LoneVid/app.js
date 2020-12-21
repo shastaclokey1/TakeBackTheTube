@@ -17,8 +17,6 @@ app.get("/dashboard", function(request, response)
 
     var opts = { listId: 'UUagiBBx1prefrlsDzDxuA9A' };
 
-    var videoArray = [];
-
     yts( opts, function ( err, playlist ) 
     {
         if ( err ) 
@@ -26,49 +24,10 @@ app.get("/dashboard", function(request, response)
             throw err;
         }
 
-        console.log("Playlist:");
-        playlist.videos.forEach(function (video) 
-        {
-            var optsVideoRequest = { videoId: video.videoId };
-            console.log(optsVideoRequest);
-            if (video.videoId)
-            {
-                yts( optsVideoRequest, function ( err, videoDetails ) 
-                {
-                    if ( err ) 
-                    {
-                        throw err;
-                    }
-                    console.log("ID: " + videoDetails.videoId + "    Duration: " + videoDetails.timestamp + "    Title: " + videoDetails.title);
-                    //console.log("Description: " +  videoDetails.description);
-                    //console.log("\n\n");
-                });
-            }
-            
-
-            // var infoINeedFromVideos = 
-            // {
-            //     "videoId": video.videoId, 
-            //     "videoTitle": video.title, 
-            //     "videoDuration": video.duration.timestamp, 
-            //     "videoDescription": "" 
-            // };
-
-            // videoArray.push(infoINeedFromVideos);
-         });
-
-         //console.log(videoArray);
-
-        // videoArray.forEach(function (currentVideo) 
-        // {
-        //     console.log("ID: " + currentVideo.videoId + "    Duration: " + currentVideo.videoDuration + "    Title: " + currentVideo.videoTitle);
-            
-        // });
+        response.render("dashboard", {dashboardVideos: playlist.videos});
     });
 
-    console.log(videoArray);
-
-    response.render("dashboard");
+    
 });
 
 app.get("/watch", function(request, response) {

@@ -1,0 +1,23 @@
+I want to figure out how to share the videos I have requested in the backend code with yt-search with the front end ejs page I have set up for the dashboard.
+
+- I looked at the yelp camp project I built a year ago when working on a web development course and found a super easy way to pass an array to the front end ejs to be displayed as html.
+	- The first step is to pass the array variable as a parameter when rendering the target ejs file.
+	- This is done like so: response.render("campgrounds/index", {campgrounds: allCampgroundsInDB});
+	- The variable "campgrounds" and any other javascript functionality can then be accessed in the ejs file by embedding a special html tag.
+		- The tag <% js logic or loop %> allows you to embedd a forEach({}) loop or if(){}else{} statement in the ejs file.
+		- The tag <%= variable number or string %> lets you evaluate the js variable in the tag as the html text to be displayed.
+		- This is perfect for displaying each video.
+
+- I learned that there can be undefined items in the playlist video list.
+	- This causes an empty video box to display on the dashboard.
+	- I can fix this by adding in <% if (video.thumbnail != null) {video box} %> around all the content in the forEach block that propagates all the video boxes for the dashboard.
+	- Testing now.
+	- It worked! I now have the ability to request all the videos from a hard coded channel and display them on the dashboard.
+	- Additionally, each "video box" on the dashboard is set up as a link to the watch page.
+	- Right now the links don't have any specific info pertaining to each video, so it just loads the generic watch page.
+	- I can pass the id as a link param and use that to run a video specific yt-search request on the backend then pass the title, description, id, and duration to the watch.ejs file to play unique videos. :)
+
+- I am having issues with the ui not spacing out each of the video boxes well enough.
+	- I can investigate this and iron out the ui once I have all the mvp functionality for the website finished.
+
+-I kicked butt today!!!
