@@ -20,4 +20,10 @@ I want to figure out how to share the videos I have requested in the backend cod
 - I am having issues with the ui not spacing out each of the video boxes well enough.
 	- I can investigate this and iron out the ui once I have all the mvp functionality for the website finished.
 
--I kicked butt today!!!
+- I kicked butt today!!!
+
+- I used the url of the watch page to pass in a video id query parameter "watch/?id=lasdj0iasdoi".
+	- I was able to access this query param by calling request.query.id in the app.get("/watch", callback({})) function.
+	- Using this id, I performed a yt-search and rendered the watch ejs page with {videoDetails: video} as an accessable variable.
+	- I successfully accessed this info on the watch page to display the video, title, timestamp, and description.
+	- I can click on any of the videos on the dashboard and it successfully routes me to the correct video!! :)

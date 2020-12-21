@@ -3,7 +3,7 @@
 <div class="row text-center" style="display:flex; flex-wrap:wrap;">
     <% dashboardVideos.forEach(function(video){ %>
         <% if (video.thumbnail != null){ %>
-            <a href="/watch" class="col-md-3 col-md-6 row">
+            <a href="/watch?id=<%=video.videoId%>" class="col-md-3 col-md-6 row">
                 <div class="thumbnail">
                     <img src="<%= video.thumbnail %>">
                     <div class="caption">

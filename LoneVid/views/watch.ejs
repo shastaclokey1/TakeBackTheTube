@@ -5,7 +5,7 @@
 
 
 <div class="text-center" id="GrowAndShrinkWithPageWidth">
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/<%=videoDetails.videoId%>"
 		allowfullscreen="allowfullscreen"
 		mozallowfullscreen="mozallowfullscreen" 
 		msallowfullscreen="msallowfullscreen" 
@@ -15,7 +15,8 @@
 </div>
 
 <div class="text-center">
-	<h2 id="VideoTitle">This header is for the video title</h2>
-	<p id="VideoDescription">This paragraph is for the video description</p>
+	<h2 id="VideoTitle"><%=videoDetails.title%></h2>
+	<p id="VideoTimestamp"><%=videoDetails.timestamp%></p>
+	<p id="VideoDescription"><%=videoDetails.description%></p>
 </div>
 <% include partials/footer %>
