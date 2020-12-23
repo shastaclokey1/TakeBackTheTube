@@ -3,6 +3,29 @@ var bodyParser = require('body-parser');
 var yts = require('yt-search');
 var queryString = require('querystring');
 
+var listIdsForAllChannels = [
+    ['UUagiBBx1prefrlsDzDxuA9A', "Solving The Money Problem"],
+    ['UU1LAjODfg7dnSSrrPGGPPMw', "Hyperchange"],
+    ['UUi5N_uAqApEUIlg32QzkPlg', "Bret Weinstien"],
+    ['UUL_f53ZEJxp8TtlOkHwMV9Q', "Jordan Peterson"],
+    ['UU6Hyj5sVbiYhpc_FA14nziw', "Michaela Peterson"],
+    ['UULdPicN16eAKPKir8EY1UXQ', "Kales Brocoli"],
+    ['UUeNeAwBccKamrUbEQxoygLQ', "Saildrone"],
+    ['UU5WjFrtBdufl6CZojX3D8dQ', "Tesla"],
+    ['UUtI0Hodo5o5dUb67FeUjDeA', "SpaceX"],
+    ['UUoxcjq-8xIDTYp3uz647V5A', "Numberphile"],
+    ['UUUHW94eEFW7hkUMVaZz4eDg', "Minute Physics"],
+    ['UU6uKrU_WqJ1R2HMTY3LIx5Q', "Everyday Astronaut"],
+    ['UUY1kMZp36IQSyNx_9h4mpCg', "Mark Rober"],
+    ['UUHnyfMqiRRG1u-2MsSQLbXA', "Vertasium"],
+    ['UUSgbEY-tEu0S_ill_fEL82w', "Johny Arnett"],
+    ['UUiWLfSweyRNmLpgEHekhoAg', "ESPN"],
+    ['UUvOh9i-BOFzu51rpj33fGag', "Barefoot Surfing"],
+    ['UUqhnX4jA0A5paNd1v-zEysw', "GoPro"],
+    ['UU2GIHZpQiJy-8286f4lj_cg', "Pinkbike"],
+    ['UUtDdB-mu47GeMOroAQOb0Sg', "Snowboard Pro Camp"],
+];
+
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -10,25 +33,22 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", function(request, response) {
-    response.render("landing");
+    response.render("landing", {playlists: listIdsForAllChannels});
 });
 
 app.get("/dashboard", function(request, response) 
 {
+        var opts = { listId: request.query.playlistId };
 
-    var opts = { listId: 'UUagiBBx1prefrlsDzDxuA9A' };
-
-    yts( opts, function ( err, playlist ) 
-    {
-        if ( err ) 
+        yts( opts, function ( err, playlist ) 
         {
-            throw err;
-        }
+            if ( err ) 
+            {
+                throw err;
+            }
 
-        response.render("dashboard", {dashboardVideos: playlist.videos});
-    });
-
-    
+            response.render("dashboard", {dashboardVideos: playlist.videos});
+        });
 });
 
 app.get("/watch", function(request, response) 

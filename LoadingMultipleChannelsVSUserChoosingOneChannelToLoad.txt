@@ -1,0 +1,12 @@
+My original plan for the landing page was to allow myself to select as many channels as I wanted and load all of those channels to the dashboard when I click the "Dashboard" button. After seeing that it took roughly thirty seconds to request 20 channels, I have come up with a new plan for content on the dashboard. I will still display a list of the channels on the landing page. This might be as radio buttons or a selectable dropdown. I will then load only the videos from the selected channel when I click the dashboard button. I came up with this while riding my bike with my girlfriend, :), and I think it actually aligns better with what I want the site to do. The purpose of lonevid is to give myself an interface to all the good information on youtube without much of the distraction. Only allowing myself to choose and browse one channel at a time forces me to make more of a decision about what I want to watch rather than having content be served to me. I think this feature will insentivise me to be actively curious about new information.
+
+- I need to figure out how to make a dropdown with selectable items.
+	- I used a <select> tag with ejs generated <option> inner tags to make the dropdown with each playlist.
+	- Each dropdown item has a visable playlist name and a value attribute that is set to the playlist id.
+	- I added a javascript function to the page that changes the href of the dashboard button to include a ?playlistId=FromSelect.
+		- I used document.querySelector() for this and referenced the html objects using their tag id's.
+	- I added decoding on the backend in the /dashboard route to perform a yt-search for a playlist given whatever playlist id is passed through the url with the query param.
+	- This worked and I was able to load videos from any of the channels I selected from the list!!! :) Good morning!!
+	- The website is now pretty damn usefull.
+
+I also realized on that bike ride that there should be a general search box on the landing page and eventually the ability to add new channels through the site. I think these two features would provide access to all youtube has to offer.
