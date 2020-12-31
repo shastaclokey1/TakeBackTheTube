@@ -38,17 +38,38 @@ app.get("/", function(request, response) {
 
 app.get("/dashboard", function(request, response) 
 {
+
+    if (request.query.searchKey != "" && request.query.searchKey != null)
+    {
+        var opts = { query: request.query.searchKey };
+
+        yts( opts, function ( err, ytSearchResults ) 
+        {
+            if ( err ) 
+            {
+                console.log(err);
+                response.redirect("/");
+            }
+
+            response.render("dashboard", {dashboardVideos: ytSearchResults.videos});
+        });
+    }
+    else
+    {
         var opts = { listId: request.query.playlistId };
 
         yts( opts, function ( err, playlist ) 
         {
             if ( err ) 
             {
-                throw err;
+                console.log(err);
+                response.redirect("/");
             }
-
+    
             response.render("dashboard", {dashboardVideos: playlist.videos});
         });
+    }
+
 });
 
 app.get("/watch", function(request, response) 
@@ -61,7 +82,8 @@ app.get("/watch", function(request, response)
     {
         if ( err ) 
         {
-            throw err;
+            console.log(err);
+            response.redirect("/");
         }
 
         response.render("watch", {videoDetails: video});

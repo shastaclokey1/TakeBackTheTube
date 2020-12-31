@@ -4,7 +4,8 @@
   "description": "I often find myself scrolling through tons of content I am not interested in for up to 20 minutes when I should be working or could be doing something more fun. I want to solve this problem by making myself a website that lets me curate the youtube channels I am interested in onto a single page that shows all the videos I havent watched yet in an order that makes sense.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
