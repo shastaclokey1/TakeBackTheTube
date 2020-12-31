@@ -3,7 +3,7 @@
 <div>
     <% dashboardVideos.forEach(function(video){ %>
         <% if (video.thumbnail != null){ %>
-            <a href="/watch?id=<%=video.videoId%>" class="col-md-3 col-md-6 row" id="dashboardVideo">
+            <a href="/watch?id=<%=video.videoId%>" class="dashboardVideo">
                 <div class="thumbnail">
                     <img src="<%= video.thumbnail %>">
                     <div class="caption">
@@ -11,7 +11,7 @@
                         <h4><%= video.author.name %></h4>
                         <h4><%= video.duration.timestamp %></h4>
                     </div>
-                </div>
+                </div><br><br>
             </a>
         <% } %>
     <% }) %>

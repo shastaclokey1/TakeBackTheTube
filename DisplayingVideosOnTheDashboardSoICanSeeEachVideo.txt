@@ -1,0 +1,10 @@
+At the moment, all the videos on the dashboard are mushed together. I want to fix this so I can see each of the clickable dashboard video boxes.
+
+- I will start by looking at the dashboard.ejs page that I have to see if I can fix this easily.
+- I fixed it by simplifying.
+	- I removed the flexbox calls and just used some padding and width css.
+	- Now, there is a simple vertical column of videos on the dashboard whether I search for a query term or load a channel.
+- Everything looks much more readable and I can scroll :)
+- I like it.
+- The dashboard still doesn't look pretty, but it is functional and that's all that matters to me.
+- It is now definitely bed time.
