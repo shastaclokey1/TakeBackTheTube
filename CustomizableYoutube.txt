@@ -26,51 +26,100 @@ I often have a tough time remembering what I have watched after falling into a y
 	
 	I can use the summaries I will write at the end of each video as the content for a history tab that houses the titles and my descriptions for the last day/week/month/year.
 
-*************Plan****************
+*************Plan For MVP****************
 1. Use one of my bare bones, already built websites and test out each of the packages for searching youtube channel videos.
-
 	- https://www.npmjs.com/package/usetube
-
 	- https://www.npmjs.com/package/yt-search (I went with this api)
-	
 	- I can use the website I built for John because it already has express and everything set up.
-
 2. Make a dashboard where I can click check boxes to include channels in search params then scroll through all the titles and descriptions of videos that get returned.
-
 	- I will manually include the channels in some kind of list (probably just an array).
-
 		* Each channel from the list above will have an associated checkbox on the dashboard to specify whether or not I want to request the videos from that channel.
-
 	- I will request all the uploaded videos for each selected channel from the above list.
-
 		* All of these videos will be conglomorated into one giant list sorted from newest to oldest.
-
 	- I will need to figure out how to implement a scrollable UI that works for a computer and a smartphone.
-	
 		* This scrolable UI will display the title, description, and duration for each video in the conglomorate list.
-
 		* I can either load all the videos to the list when I launch the page or have the interface be dynamic and only load the items in the list that are in view. I don't know how to do this, so maybe it is best to load all the elements to start and go from there.
-
 		* I need to figure out where this conglomorate list will be stored and how I can populate the dashboard html based on the search results from the channels I select.
-
 		* I can probably make a "partial" html document that I inject into the dashboard page and provide information to from the app.js server code.
-
 		* I need to refresh on how to do this.
-
 	- Each title/description pair will be a clickable button that launches the specified video in the view I am about to describe.
-
 		* This launching will most likely be completed using a GET request, however I could just use hyperlinks. I think using the express framework I have set up would be best.
-
 		* As stated above, this clickable button will most likely be an html partial and include a hyperlink with the youtube video's id as a search parameter.
-
+	- I ended up changing the way each channel can be selected.
+		* Instead of a set of checkboxes that lets multiple channels get loaded at the same time, I put all the channels in a drop down and only allow one channel to be loaded at a time.
+		* This makes the site load the videos much faster.
+		* It also forces the person using the website to make a choice about what kind of video they want to watch.
+		* I think this feature aligns with the purpose of the site by encouraging thought about video consumption.
+	- I ended up also adding a search bar to let someone using the website load the first 19 videos (yt-Search's default) that relate to the search term.
+		* This gives the user the ability to look for specific content.
+		* I wanted to make sure LoneVid has all the good core functionality of youtube.
+	- The above two features let LoneVid load all the videos from a given channel or load videos relating to a given search term.
+	- I ended up displaying each video box in a single column on the dashboard that can be scrolled through.
+		* Each video box is made up of a thumbnail, video name, channel name, and duration.
 3. Make a watch page that has one video box, the video's name, the video's description, and a button to go back to the home screen.
-
 	- https://www.w3schools.com/html/html_youtube.asp
-	
 	- The watch page can probably just be an iframe for the video, a header1 or header2 element for the title, and a paragraph element for the description.
-
 	- I think the "back to home" functionality will just be in the nav bar.
-
 	- The framework for this is implemented and I have tested that the html iframe element lets me play a video given its url(youtube id).
-
 	- I found a css/javascript tool called flexbox that I should be able to use to style the ui of the watch page.
+	- The watch page ended up very similar to the above description.
+
+
+****************Plan to generate revenue from value add****************
+The purpose of this website is to help myself and maybe even to help other people.
+If/when I decide to release this website for use by more people than myself, I will need to pay for a hosting service and a database service for the full set of website features.
+I think it would be smart to separate the website into two feature sets: one that does not require a database or login and that can be funded by donations and the other that includes all the website features and is funded by a small monthly fee.
+This strategy will allow me to keep the website functional, make a small profit, and help as many people as possible while not undermining my mission by enabling adds or selling user data.
+I think it would be a really good idea to find a way for people to choose the paid service without having to provide any personal identifying information. There has to be a way to do this... I will think on this.
+
+**************Feature set for donation-funded LoneVid features***************
+The donation funded version of LoneVid will have seven pages:
+1. Landing page:
+	- The landing page will have a slideshow of calming nature pictures in the background.
+	- It will have a search bar for anyone using the site to load videos to the dashboard relating to a search term.
+2. Nav bar:
+	- The nav bar will be available on every page.
+	- It will have a premium login button to access the paid version of the site.
+	- It will have an about LoneVid button leading to a page describing the purpose of the site and the challenge I am trying to overcome.
+	- It will have a donate button leading to a page that explains why the free version needs donations and displaying lots of different methods people can use to donate.
+	- It will display the LoneVid logo as a clickable link to get back to the landing page.
+3. Dashboard:
+	- The dashboard will display the results from the search key entered by the person using the website.
+	- Each dashboard video will contain a thumbnail image, the video title, the video channel, and the video duration.
+	- Each of these dashboard video boxes will be a clickable link to take the person using the website to the watch page.
+4. Watch page:
+	- The watch page will display the video clicked on from the dashboard.
+	- It will also display the title, the video author, the video duration, and the video description.
+5. Login page:
+	- The login page will be an interface to access premium LoneVid features.
+	- It will have username and password input boxes followed by a submit button.
+	- It will also have a sign up button to allow users to start paying for premium features.
+6. About LoneVid page:
+	- This page will be a combination of info and graphics describing my struggle with youtube adiction, the real dangers it poses, and the purpose of LoneVid to short curcuit the adictive habits that youtube has created in so many people.
+7. Donate page:
+	- This page will describe what keeps the site running and where the funds that people donate will be used.
+	- Under this descripiton, this page will display methods to donate.
+	- The methods will include crypto currency, paypall, venmo, cashapp, credit card, and any other payment platform I am not thinking about.
+
+**************Feature set for premium LoneVid Features*****************
+The premium version of lonevid will have all the pages of the donation funded version. It will also have the following improvements to existing pages and additional pages.
+1. Improvements to landing page:
+	- A drop down in between the search bar and the dashboard button of the person using the website's favorite channels.
+	- The person using the website can select any of these channels and load all the uploaded videos from that channel to the dashboard in order from most to least recent.
+	- A radio button option to search for either videos or channels with the search bar.
+2. Improvements to Dashboard:
+	- The ability to display a list of channels from a search term in addition to the videos from a channel or from a search term.
+	- The ability to add any of the channels of videos displayed on the dashboard to a person's list of favorite channels.
+	- The ability to add any of the channels displayed by searching for channels to a person's list of favorite channels.
+3. Improvements to Watch page:
+	- A notes box either next to or below the video for the person watching to write down any thoughts they have while watching the video.
+4. Improvements to the Nav bar:
+	- A manage habits button that leads to a premium only page that allows the paying customer using the site to manage their watching habits. 
+	- The sign in button will also change to a sign out button.
+	- There will also be an account button that leads to a page for the paying customer to manage their account information.
+5. Manage Habits page:
+	- The manage habits page will display recent watched videos, watching statistics, and allow the person to remove channels from their favorite channels list.
+	- It will also allow the person to view any notes they took while watching.
+	- These notes will be attached to the video somehow.
+6. Account page:
+	- The account page will allow the customer to manage payment methods, change their password, cancel their premium subscription, or delete their account permanently.
