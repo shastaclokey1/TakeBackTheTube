@@ -11,7 +11,7 @@
     <div id="landing-header">
       <h1><img id="landing-logo" src="/images/LoneVidLogo.png" alt="LoneVid Logo"></h1>
       <div>
-        <input onchange="updateBtnHref()" type="text" id="searchBar" name="search"><br><br>
+        <input onchange="updateBtnHref()" onkeydown="detectEnterPressed(event)" type="text" id="searchBar" name="search"><br><br>
       </div>
       <div>
         <select onchange="updateBtnHref()" name="playlistSelection" id="playlistSelectionDropdown">
@@ -40,6 +40,18 @@
         var dashboardButton = document.querySelector("#dashboardBtn");
         var searchBar = document.querySelector("#searchBar");
         dashboardButton.href = "/dashboard?playlistId=" + playlistSelector.value + "&searchKey=" + searchBar.value;
+      }
+
+      function detectEnterPressed(event)
+      {
+        var searchInput = document.querySelector("#searchBar");
+        var dashboardButton = document.querySelector("#dashboardBtn");
+        var playlistSelector = document.querySelector("#playlistSelectionDropdown");
+        if (event.keyCode == 13)
+        {
+          dashboardButton.href = "/dashboard?playlistId=" + playlistSelector.value + "&searchKey=" + searchBar.value;
+          dashboardButton.click();
+        }
       }
       </script>
 

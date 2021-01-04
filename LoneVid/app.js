@@ -38,7 +38,6 @@ app.get("/", function(request, response) {
 
 app.get("/dashboard", function(request, response) 
 {
-
     if (request.query.searchKey != "" && request.query.searchKey != null)
     {
         var opts = { query: request.query.searchKey };
