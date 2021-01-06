@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var yts = require('yt-search');
-var queryString = require('querystring');
 
 var listIdsForAllChannels = [
     ['UUagiBBx1prefrlsDzDxuA9A', "Solving The Money Problem"],
