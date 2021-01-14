@@ -10,3 +10,4 @@ The point of this document will be to explore the different options for deployin
 	- I had edited the yt-search.js file on line 837 to just use the full url for the thumbnail instead of the url split with a question mark delimiter.
 	- The reason this is an issue is that there is a bug in yt-search that will crash the program any time there are null fields inside a playlist video.
 	- I need to figure out if I can upload my own version of the yt-search module to heroku instead of pulling in the one with the bug.
+	- I did it!! I committed just the yt-search node module and now the heroku app works!!

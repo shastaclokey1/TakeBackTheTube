@@ -23,6 +23,7 @@ var listIdsForAllChannels = [
     ['UUqhnX4jA0A5paNd1v-zEysw', "GoPro"],
     ['UU2GIHZpQiJy-8286f4lj_cg', "Pinkbike"],
     ['UUtDdB-mu47GeMOroAQOb0Sg', "Snowboard Pro Camp"],
+    ['UUhBBKdDfp-Gy5-l8s7LCfbQ', "Shasta Clokey"],
 ];
 
 var app = express();
@@ -30,6 +31,10 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
+function ProtectKatie() {
+    console.log("Stay away all you ghosties and bad things!! \nThis is my girlfriend and you can't do anything to hurt her!!");
+}
 
 app.get("/", function(request, response) {
     response.render("landing", {playlists: listIdsForAllChannels});
@@ -98,4 +103,5 @@ app.get("*", function(request, response) {
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("Server has started for Lone Vid");
+    ProtectKatie();
 });
