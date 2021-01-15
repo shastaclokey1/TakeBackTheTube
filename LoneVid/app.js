@@ -24,6 +24,7 @@ var listIdsForAllChannels = [
     ['UU2GIHZpQiJy-8286f4lj_cg', "Pinkbike"],
     ['UUtDdB-mu47GeMOroAQOb0Sg', "Snowboard Pro Camp"],
     ['UUhBBKdDfp-Gy5-l8s7LCfbQ', "Shasta Clokey"],
+    ['UUxHTM1FYxeC4F7xDsBVltGg', "Wim Hof"],
 ];
 
 var app = express();
