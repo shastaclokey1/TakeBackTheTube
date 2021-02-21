@@ -3,14 +3,18 @@ body {
 }
 
 #landing-logo {
-    width: 40%;
+    width: 60%;
 }
 
 #landing-header {
     z-index: 1;
     position: relative;
     text-align: center;
-    padding-top: 40vh;
+    padding-top: 30vh;
+}
+
+.landingPageElement {
+    padding: 30px;
 }
 
 .slideshow { 

@@ -2,6 +2,21 @@
     height: 50px;
 }
 
+#GrowAndShrinkWithPageWidth{
+    width: 100%;
+    height: '';
+    padding: 50px;
+}
+
+#GrowAndShrinkWithPageWidth > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#VideoDetailsOnWatchPage {
+    padding: 50px;
+}
+
 .dashboardVideo {
     width: 25%;
     padding: 50px;

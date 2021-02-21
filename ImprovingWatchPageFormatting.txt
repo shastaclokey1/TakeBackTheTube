@@ -1,0 +1,30 @@
+The purpose of this document is to figure out how to fix the watch page formatting so the video box is bigger in portrait mode and the description is parsed nicely.
+
+- I will start by parsing the description nicely. 
+- I am doing this first because it seems more programmy and fun and I don't like doing UI stuff as much as the backend problem solving.
+- I will first set up a console.log() in the express watch page route to see what the description text looks like as text that isn't in an ejs tag.
+	- It looks like there are definitely \n characters in the description that the ejs tag is just ignoring.
+- I will now split the description into a string array using the '\n' as a delimiter and pass that array into the watch page ejs as a second variable in addition to the videoDetails.
+- I will add each item in the list as a paragraph tag that will appear in decending order. Sweet! Let's do it.
+- I did it and used a 50px padding to make the description looke more centered on the page but still left alligned.
+
+- Now I need to figure out how to set the video box size so that it takes up most of the available width of the screen.
+
+- I kind of fixed a different problem instead. 
+- I found a stack exchange post describing how to prevent recommended videos in an iframe.
+- The first suggestion was t add ?rel=0 to the end of the embedded video url.
+- This didn't stop recommended content, but it seems to have limited recommended content to only videos from the channel of the video that just finished.
+- That is definitely an improvement, but I think it would be better to replace the recommended content with a black screen or a cool nature picture.
+- There was a suggestion for how to do this on the same stack exchange post.
+- https://stackoverflow.com/questions/36321539/how-do-i-hide-related-videos-at-the-end-of-a-youtube-playlist-embed-code
+
+- Ok, now time to fix the size of the watch page video box.
+- I am going to try setting the width as a percentage of the screen width, then changing the video box height with javascript whenever the screen size changes.
+- I did it!
+- I had to use jquery to get the video width, calculate what the height should be, and set the video height to that in a function.
+- I then attached this height setting function to the callback that fires every time the screen resizes and every time the screen orientation changes.
+
+- I spaced out the items on the landing page and made the logo bigger.
+- I will eventually need to learn how to make bigger and prettier buttons, search bars, and drop downs, but right now spacing them out works for me.
+
+- I fixed all the cosmetic stuff and made the recommended content issue much better.

@@ -1,11 +1,7 @@
-<% include partials/header %>
-<div class="text-center">
-	<h1>Watch</h1>
-</div>
-
-
+<% include partials/header %>	
+	
 <div class="text-center" id="GrowAndShrinkWithPageWidth">
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/<%=videoDetails.videoId%>"
+	<iframe src="https://www.youtube.com/embed/<%=videoDetails.videoId%>?rel=0"
 		allowfullscreen="allowfullscreen"
 		mozallowfullscreen="mozallowfullscreen" 
 		msallowfullscreen="msallowfullscreen" 
@@ -13,10 +9,28 @@
 		webkitallowfullscreen="webkitallowfullscreen">
 	</iframe>
 </div>
-
-<div class="text-center">
-	<h2 id="VideoTitle"><%=videoDetails.title%></h2>
-	<p id="VideoTimestamp"><%=videoDetails.timestamp%></p>
-	<p id="VideoDescription"><%=videoDetails.description%></p>
+<div id="VideoDetailsOnWatchPage" class="text-center">
+	<div class="text-left">
+		<h2 id="VideoTitle"><%=videoDetails.title%></h2>
+		<p id="VideoUploadDate"><%=videoDetails.uploadDate%></p>
+		<p id="VideoTimestamp"><%=videoDetails.timestamp%></p>
+		<% videoDescriptionLines.forEach(function(line){ %>
+			<p><%=line%></p>
+		<% }) %>
+	</div>
 </div>
+
+<script>
+		var setVideoBoxHeight = function() {
+			var $videoBox = $(document.getElementById('GrowAndShrinkWithPageWidth'));
+			var height = ($videoBox.width() * .6625) + "px";
+			$videoBox.css('height', height);
+		};
+		
+		setVideoBoxHeight();
+		$(window).on('resize', setVideoBoxHeight);
+		$(window).on('orientationchange', setVideoBoxHeight);
+
+</script>
+
 <% include partials/footer %>

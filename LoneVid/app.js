@@ -90,7 +90,8 @@ app.get("/watch", function(request, response)
             response.redirect("/");
         }
 
-        response.render("watch", {videoDetails: video});
+        var descriptionArray = video.description.split('\n');
+        response.render("watch", {videoDetails: video, videoDescriptionLines: descriptionArray});
     });
 });
 

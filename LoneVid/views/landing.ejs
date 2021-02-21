@@ -10,17 +10,19 @@
     
     <div id="landing-header">
       <h1><img id="landing-logo" src="/images/LoneVidLogo.png" alt="LoneVid Logo"></h1>
-      <div>
+      <div class="landingPageElement">
         <input onchange="updateBtnHref()" onkeydown="detectEnterPressed(event)" type="text" id="searchBar" name="search"><br><br>
       </div>
-      <div>
+      <div class="landingPageElement">
         <select onchange="updateBtnHref()" name="playlistSelection" id="playlistSelectionDropdown">
           <% playlists.forEach(function(playlistIdAndName){ %>
             <option value="<%=playlistIdAndName[0]%>"><%=playlistIdAndName[1]%></option>
           <% }) %>
         </select><br><br>
       </div>
-      <a id="dashboardBtn" href="/dashboard?playlistId=<%=playlists[0][0]%>" class="btn btn-lg btn-danger">Dashboard</a>
+      <div class="landingPageElement">
+          <a id="dashboardBtn" href="/dashboard?playlistId=<%=playlists[0][0]%>" class="btn btn-lg btn-danger">Dashboard</a>
+      </div>
     </div>
     
     <ul class="slideshow">
