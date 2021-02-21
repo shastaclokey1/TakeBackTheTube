@@ -6,6 +6,7 @@
     width: 100%;
     height: '';
     padding: 100px;
+    padding-bottom: 0px;
 }
 
 #GrowAndShrinkWithPageWidth > iframe{
@@ -15,6 +16,7 @@
 
 #VideoDetailsOnWatchPage {
     padding: 100px;
+    padding-top: 20px;
 }
 
 .dashboardVideo {
