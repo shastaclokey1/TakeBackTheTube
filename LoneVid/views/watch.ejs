@@ -23,8 +23,8 @@
 <script>
 		var setVideoBoxHeight = function() {
 			var $videoBox = $(document.getElementById('GrowAndShrinkWithPageWidth'));
-			var height = ($videoBox.width() * .6625) + "px";
-			$videoBox.css('height', height);
+			var height = ($videoBox.width() * .6625);
+			$videoBox.css('height', height + "px");
 		};
 		
 		setVideoBoxHeight();
