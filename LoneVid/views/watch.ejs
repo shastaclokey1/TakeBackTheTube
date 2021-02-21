@@ -11,11 +11,11 @@
 </div>
 <div id="VideoDetailsOnWatchPage" class="text-center">
 	<div class="text-left">
-		<h2 id="VideoTitle"><%=videoDetails.title%></h2>
-		<h4 id="VideoUploadDate"><%=videoDetails.uploadDate%></h4>
-		<h4 id="VideoTimestamp"><%=videoDetails.timestamp%></h4>
+		<h1 id="VideoTitle"><%=videoDetails.title%></h1>
+		<h3 id="VideoUploadDate"><%=videoDetails.uploadDate%></h3>
+		<h3 id="VideoTimestamp"><%=videoDetails.timestamp%></h3>
 		<% videoDescriptionLines.forEach(function(line){ %>
-			<h4><%=line%></h4>
+			<h3><%=line%></h3>
 		<% }) %>
 	</div>
 </div>
