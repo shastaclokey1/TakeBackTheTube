@@ -95,8 +95,8 @@ app.get("/watch", function(request, response)
     });
 });
 
-app.get("/addchannels", function(request, response) {
-    response.render("addchannels");
+app.get("/about", function(request, response) {
+    response.render("about");
 });
 
 app.get("*", function(request, response) {
