@@ -99,6 +99,10 @@ app.get("/about", function(request, response) {
     response.render("about");
 });
 
+app.get("/donate", function(request, response) {
+    response.render("donate");
+});
+
 app.get("*", function(request, response) {
     response.redirect("/");
 });
