@@ -90,8 +90,10 @@ app.get("/watch", function(request, response)
             response.redirect("/");
         }
 
+        var channelURLArray = video.author.url.split("/");
+        var channelPlaylistId = channelURLArray[channelURLArray.length-1].replace("UC", "UU");
         var descriptionArray = video.description.split('\n');
-        response.render("watch", {videoDetails: video, videoDescriptionLines: descriptionArray});
+        response.render("watch", {videoDetails: video, videoDescriptionLines: descriptionArray, channelPlaylistId: channelPlaylistId});
     });
 });
 
