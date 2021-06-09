@@ -1,0 +1,21 @@
+I am writing this document to explore the many database options I could use to allow myself to add and remove channels from my "favorites" list. I could also add a "blocked channels" list to ensure I don't see content I am not interested in.
+
+- I looked up what the best databases are for node.js applications.
+- There were many, but mongoDB showed up as one of the highest rated options.
+	- Mongo is a non relational database.
+	- I have used it in the past for my web development course.
+	- It is one of the most popular database solutions for modern web apps.
+	- There is a free cloud based version of mongoDB that gives 512mb.
+	- I can upgrade to a paid version if I need to to get more storage.
+	- It has a REST api so I should be able to connect it with aws.
+	- https://www.mongodb.com/cloud/atlas/signup
+- I think I'll go for mongo db.
+- I found and am working through a mongo db course.
+- I want to build out the features while working through the course.
+- I want to make loading search results and loading channel results use two different ejs pages.
+- I want each of the videos on the search results ejs page to have a "go to channel" button.
+- I want the channel page to have a "remove channel" or "add channel" button that changes based on whether the channel is in my channels list.
+- I decided to put the "go to channel" button on the watch page.
+- This will allow me to still only have one dashboard page.
+- My next step is adding in the add/remove channel button.
+- From there I will just have to learn how to use a database.

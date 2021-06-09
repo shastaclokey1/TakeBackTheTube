@@ -1,0 +1,6 @@
+I want to think through how I will sign up for all the different services I end up using to build LoneVid and a large factor in that is the email provider I will use to do that.
+
+- It looks like proton mail will be the best option to ensure my email is secure, low cost, and at no risk of being shut down by google.
+- A bonus is proton is encrypted.
+- I set up an email and am ready to go :)
+- Proton mail looks so awesome!
