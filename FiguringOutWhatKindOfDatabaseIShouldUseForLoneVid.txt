@@ -19,3 +19,8 @@ I am writing this document to explore the many database options I could use to a
 - This will allow me to still only have one dashboard page.
 - My next step is adding in the add/remove channel button.
 - From there I will just have to learn how to use a database.
+- I did it!
+- My app is now fully functional except that it does not have a database.
+- I can go to the channel of a video that I have searched or loaded from a channel playlist.
+- I can add or remove a channel from its channel dashboard.
+- The next step is to push the listIdsForAllChannels array into a mongo database so I can dynamically update my favorite channels and have them persist across power cycles.

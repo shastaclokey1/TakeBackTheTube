@@ -1,0 +1,24 @@
+<% include partials/header %>
+<h1><%=author.name%></h1>
+<% if (isChannelInFavorites){ %>
+    <a href="/removeChannel?playlistId=<%=channelPlaylistId%>" class="btn btn-lg btn-danger">Remove Channel</a>
+<% } else {%>
+    <a href="/addChannel?playlistId=<%=channelPlaylistId%>&author=<%=author.name%>" class="btn btn-lg btn-success">Add Channel</a>
+<% } %>
+<div>
+    <% dashboardVideos.forEach(function(video){ %>
+        <% if (video.thumbnail != null){ %>
+            <a href="/watch?id=<%=video.videoId%>" class="dashboardVideo">
+                <div class="thumbnail">
+                    <img src="<%= video.thumbnail %>">
+                    <div class="caption">
+                        <h4><%= video.title %></h4>
+                        <h4><%= video.author.name %></h4>
+                        <h4><%= video.duration.timestamp %></h4>
+                    </div>
+                </div><br><br>
+            </a>
+        <% } %>
+    <% }) %>
+</div>
+<% include partials/footer %>

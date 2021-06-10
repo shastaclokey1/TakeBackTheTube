@@ -33,11 +33,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-function ProtectKatie() {
+function ProtectKatie() 
+{
     console.log("Stay away all you ghosties and bad things!! \nThis is my girlfriend and you can't do anything to hurt her!!");
 }
 
-app.get("/", function(request, response) {
+app.get("/", function(request, response) 
+{
     response.render("landing", {playlists: listIdsForAllChannels});
 });
 
@@ -55,7 +57,7 @@ app.get("/dashboard", function(request, response)
                 response.redirect("/");
             }
 
-            response.render("dashboard", {dashboardVideos: ytSearchResults.videos});
+            response.render("searchDashboard", {dashboardVideos: ytSearchResults.videos, searchKey: request.query.searchKey});
         });
     }
     else
@@ -69,12 +71,68 @@ app.get("/dashboard", function(request, response)
                 console.log(err);
                 response.redirect("/");
             }
-    
-            response.render("dashboard", {dashboardVideos: playlist.videos});
+
+            var channelPlaylistId = request.query.playlistId;
+
+            response.render("channelDashboard", 
+                        {
+                            dashboardVideos: playlist.videos, 
+                            isChannelInFavorites: IsChannelInFavorites(channelPlaylistId), 
+                            channelPlaylistId: channelPlaylistId,
+                            author: playlist.videos[0].author
+                        });
         });
     }
 
 });
+
+function IsChannelInFavorites(channelPlaylistId)
+{
+    var isChannelInFavorites = false;
+    listIdsForAllChannels.forEach(element => {
+        isChannelInFavorites |= element.includes(channelPlaylistId);
+    });
+    return isChannelInFavorites == 1;
+}
+
+app.get("/addChannel", function(request, response)
+{
+    var channelPlaylistId = request.query.playlistId;
+    var author = request.query.author;
+
+    AddChannelToFavorites(channelPlaylistId, author);
+    
+    response.redirect("/");
+});
+
+function AddChannelToFavorites(channelPlaylistId, author)
+{
+    var channel = [channelPlaylistId, author];
+
+    if (!IsChannelInFavorites(channelPlaylistId))
+    {
+        listIdsForAllChannels.push(channel);
+    }
+}
+
+app.get("/removeChannel", function(request, response)
+{
+    var channelPlaylistId = request.query.playlistId;
+
+    RemoveChannelPlaylistFromFavorites(channelPlaylistId);
+
+    response.redirect("/");
+});
+
+function RemoveChannelPlaylistFromFavorites(channelPlaylistId)
+{
+    listIdsForAllChannels.forEach(element => {
+        if (element.includes(channelPlaylistId))
+        {
+            listIdsForAllChannels.splice(listIdsForAllChannels.indexOf(element), 1);
+        }
+    });
+}
 
 app.get("/watch", function(request, response) 
 {
@@ -97,19 +155,23 @@ app.get("/watch", function(request, response)
     });
 });
 
-app.get("/about", function(request, response) {
+app.get("/about", function(request, response) 
+{
     response.render("about");
 });
 
-app.get("/donate", function(request, response) {
+app.get("/donate", function(request, response) 
+{
     response.render("donate");
 });
 
-app.get("*", function(request, response) {
+app.get("*", function(request, response) 
+{
     response.redirect("/");
 });
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3000, function() 
+{
     console.log("Server has started for Lone Vid");
     ProtectKatie();
 });
